@@ -1,0 +1,29 @@
+﻿<Window x:Class="Polymnia.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Polymnia"
+        mc:Ignorable="d"
+        Title="Polymnia" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="250*"/>
+            <ColumnDefinition Width="250*"/>
+            <ColumnDefinition Width="100*"/>
+            <ColumnDefinition Width="250*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="183*"/>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="183*"/>
+        </Grid.RowDefinitions>
+        <ScrollViewer Grid.Column="3" Margin="0,10,0,10" Grid.RowSpan="3">
+            <TextBlock Name="Output" Grid.Column="3" HorizontalAlignment="Center" Text="Output..." TextWrapping="Wrap" VerticalAlignment="Center" Width="215" Height="414" Grid.Row="1"/>
+        </ScrollViewer>
+        <TextBox Name="List1" Text="List 1" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto" Margin="10,10,15,10" Grid.RowSpan="3" AcceptsReturn="True"/>
+        <TextBox Name="List2" Text="List 2" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto" Margin="10,10,15,10" Grid.RowSpan="3" Grid.Column="1" AcceptsReturn="True"/>
+        <Button Name="GetResult" Content="Get list" Grid.Column="2" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" Width="74" Click="GetResult_Click"/>
+        <TextBox Name="MinRequired" Text="35000" Grid.Column="2" HorizontalAlignment="Center" Margin="0,163,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="74"/>
+    </Grid>
+</Window>
