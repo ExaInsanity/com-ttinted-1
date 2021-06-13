@@ -34,7 +34,7 @@ namespace Polymnia
                 if(ParseThousandsSeparator(v.Split(' ')[2]) > required - 1)
                     continue;
 
-                members1 = members1.Append(v.Split(' ')[1].Trim(':')).ToArray();
+                members1 = members1.Append(v.Split(' ')[1]).ToArray();
             }
 
             foreach(var v in List2.Text.Split('\n'))
@@ -45,7 +45,7 @@ namespace Polymnia
                 if(ParseThousandsSeparator(v.Split(' ')[2]) > required - 1)
                     continue;
 
-                members2 = members2.Append(v.Split(' ')[1].Trim(':')).ToArray();
+                members2 = members2.Append(v.Split(' ')[1]).ToArray();
             }
 
             String result = "The following members did not reach the quota:\n";
@@ -55,7 +55,7 @@ namespace Polymnia
                 if(!members2.Contains(v))
                     continue;
 
-                result += $"{v}\n";
+                result += $"{v.Trim(':')}\n";
             }
 
             Output.Text = result;
